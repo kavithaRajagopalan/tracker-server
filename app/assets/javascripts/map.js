@@ -27,7 +27,7 @@ $(function () {
             shop_details.forEach(function (shop) {
                 var marker = new L.Marker(new L.LatLng(shop["latitude"], shop["longitude"]), { title: shop["name"], singleMarkerMode: true });
                 var popupContent =
-                    "<p> class='title'>Name : " + shop["name"] + " </p>" +
+                    "<p class=\"title\">Name : " + shop["name"] + " </p>" +
                         "<p>Yesterday : " + shop["yesterday"] + " </p>" +
                         "<p>Tomorrow : " + shop["tomorrow"] + " </p>" +
                         "<p>Issue : " + shop["issue"] + " </p>" +
