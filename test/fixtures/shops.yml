@@ -1,0 +1,21 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  latitude: 
+  longitude: 
+  name: 
+  yesterday: 
+  tomorrow: 
+  issue: 
+  addition: 
+  price: 9.99
+
+two:
+  latitude: 
+  longitude: 
+  name: 
+  yesterday: 
+  tomorrow: 
+  issue: 
+  addition: 
+  price: 9.99
