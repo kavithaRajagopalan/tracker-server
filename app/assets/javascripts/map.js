@@ -13,16 +13,6 @@ $(function () {
         this.map.addLayer(osm);
         this.map.addLayer(this.markers);
 
-        $.ajax({
-            url: '/shop',
-            type: "GET",
-            dataType: "json"
-        }).success(function (data) {
-                render_shops(data);
-            }).error(function (err) {
-                console.log(err)
-            });
-
         var render_shops = function (shop_details) {
             shop_details.forEach(function (shop) {
                 var marker = new L.Marker(new L.LatLng(shop["latitude"], shop["longitude"]), { title: shop["name"], singleMarkerMode: true });
@@ -78,6 +68,17 @@ $(function () {
             }
 
             Map.route_details();
+
+            $.ajax({
+                url: '/shop',
+                type: "GET",
+                dataType: "json"
+            }).success(function (data) {
+                    render_shops(data);
+                }).error(function (err) {
+                    console.log(err)
+                });
+
         }
     }
 );
