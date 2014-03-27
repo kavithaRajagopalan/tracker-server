@@ -5,11 +5,11 @@ $(function () {
         this.map = new L.Map('map');
         this.markers = new L.MarkerClusterGroup();
         L.Icon.Default.imagePath = '/assets/images'
-        var hull = new L.LatLng(11, 78);
+        var hull = new L.LatLng(10.7951, 78.7045);
         var osmUrl = 'http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png';
         var osmAttrib = 'Map data © openstreetmap contributors';
         var osm = new L.TileLayer(osmUrl, {minZoom: 1, maxZoom: 18, attribution: osmAttrib});
-        this.map.setView(hull, 8);
+        this.map.setView(hull, 11);
         this.map.addLayer(osm);
         this.map.addLayer(this.markers);
 
@@ -61,7 +61,7 @@ $(function () {
                             console.log(item)
                             coordinates.push(new L.LatLng(item['latitude'], item['longitude']));
                         });
-                        _this.map.setView(coordinates[0], 10);
+                        _this.map.setView(coordinates[0], 15);
                         var polyLine = L.polyline(coordinates, {color: 'red'}).addTo(_this.map);
                     });
                 }
