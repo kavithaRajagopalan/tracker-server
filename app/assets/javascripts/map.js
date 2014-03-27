@@ -5,7 +5,7 @@ $(function () {
         this.map = new L.Map('map');
         this.markers = new L.MarkerClusterGroup();
         L.Icon.Default.imagePath = '/assets/images'
-        var hull = new L.LatLng(13.8, 77);
+        var hull = new L.LatLng(11, 78);
         var osmUrl = 'http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png';
         var osmAttrib = 'Map data © openstreetmap contributors';
         var osm = new L.TileLayer(osmUrl, {minZoom: 1, maxZoom: 18, attribution: osmAttrib});
