@@ -6,7 +6,7 @@ class ShopController < ApplicationController
   end
 
   def create
-    shopName = Shops.find_or_create_by_name params[:name]
+    shopName = Shops.find_or_create_by_name(params[:name])
     shopName.update_attributes!(params.slice(:yesterday, :issue, :tomorrow, :addition, :price))
     render :json => shopName
   end
